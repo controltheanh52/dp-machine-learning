@@ -12,3 +12,4 @@ with st.expander('data'):
   read
 
 st.write('**X**')
+X = read.drop('species')
