@@ -46,4 +46,4 @@ with st.sidebar:
 
   input_penguins = pd.concat([input_read, X], axis = 0)
 
-input_penguins
+input_read
