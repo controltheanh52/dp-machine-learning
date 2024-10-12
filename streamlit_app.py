@@ -49,3 +49,8 @@ with st.expander('input features'):
   st.write('**input penguin**')
   input_read
   input_penguins
+
+#encode
+encode = ['island', 'gender']
+read_penguins = pd.getdumies(input_penguins, predix = endcode)
+read_penguins
