@@ -12,4 +12,8 @@ with st.expander('data'):
   read
 
 st.write('**X**')
-X = read.drop('species')
+X = read.drop('species', axis =  1)
+
+st.write('**y**')
+y = read.species
+y
