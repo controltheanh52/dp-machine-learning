@@ -48,6 +48,7 @@ with st.sidebar:
 with st.expander('input features'):
   st.write('**input penguin**')
   input_read
+  st.write('**Combined penguins data**')
   input_penguins
 
 #encode
