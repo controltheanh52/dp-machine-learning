@@ -59,7 +59,7 @@ def target_encode(val):
 y = y_raw.apply(target_encode)
 y
 
-  input_penguins = pd.concat([input_read, X], axis = 0)
+input_penguins = pd.concat([input_read, X], axis = 0)
 with st.expander('input features'):
   st.write('**input penguin**')
   input_read
