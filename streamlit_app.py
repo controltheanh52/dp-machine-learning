@@ -12,15 +12,15 @@ with st.expander('data'):
   read
 
   st.write('**X**')
-  X = read.drop('species', axis =  1)
-
+  X_raw = read.drop('species', axis =  1)
+  X_raw
   st.write('**y**')
-  y = read.species
-  y
+  y_raw = read.species
+  y_raw
 
 with st.expander('Data visualization'):
   #"bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g"
-  st.scatter_chart(data = read, x = "bill_length_mm", y = "body_mass_g", color = 'species')
+  st.scatter_chart(data = read, x_raw = "bill_length_mm", y_raw = "body_mass_g", color = 'species')
 
 
 #data preparations
@@ -43,6 +43,20 @@ with st.sidebar:
           'sex': gender}
 
   input_read = pd.DataFrame(data, index =[0])
+#encode x
+encode = ['island', 'sex']
+read_penguins = pd.get_dummies(input_penguins, prefix = encode)
+
+input_row = read_penguins[:1]
+
+#encode y
+target_mapper  = {'Adelie': 0.
+                 'Chinstrap': 1,
+                  'Gentoo': 2};
+
+def target_encode(val)
+  return target_mapper[val]
+
 
   input_penguins = pd.concat([input_read, X], axis = 0)
 with st.expander('input features'):
@@ -50,9 +64,7 @@ with st.expander('input features'):
   input_read
   st.write('**Combined penguins data**')
   input_penguins
+  st.write('**Encoded input penguin**')
+  input_row
 
-#encode
-encode = ['island', 'sex']
-read_penguins = pd.get_dummies(input_penguins, prefix = encode)
 
-read_penguins[:1]
