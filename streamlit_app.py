@@ -61,12 +61,4 @@ y = y_raw.apply(target_encode)
 y
 
 
-with st.expander('input features'):
-  st.write('**input penguin**')
-  input_read
-  st.write('**Combined penguins data**')
-  input_penguins
-  st.write('**Encoded input penguin**')
-  input_row
-
 
