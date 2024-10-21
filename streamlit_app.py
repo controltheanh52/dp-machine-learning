@@ -44,13 +44,6 @@ with st.sidebar:
 
   input_read = pd.DataFrame(data, index =[0])
   input_penguins = pd.concat([input_read, X], axis = 0)
-#encode x
-encode = ['island', 'sex']
-read_penguins = pd.get_dummies(input_penguins, prefix = encode)
-
-input_row = read_penguins[:1]
-
-#encode y
 
 
 
